@@ -1,0 +1,178 @@
+@import "tailwindcss";
+.fuente-nav {
+  font-family: 'Space Grotesk', sans-serif;
+}
+.fuente-logo {
+  font-family: 'BBH Bogle', sans-serif;
+  font-weight: 500;
+}
+.fuente-firma {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-weight: 300;
+  font-size: var(--text-6xl);
+  font-style: italic;
+  text-align: center;
+}
+.fuente-titulos {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bold;
+  font-size: var(--text-8xl);
+  background: linear-gradient(90deg, #5899FA 0%, #FFFFFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+.fuente-proyectos{
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: bold;
+  font-size: var(--text-8xl);
+  color: #FFFFFF;
+}
+.fuente-body {
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+.fuente-bebas {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.fuente-tiktok {
+  font-family: 'TikTok Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #60a5fa #050826;
+}
+
+.seccion-deg-azul-negro {
+  background: linear-gradient(45deg, #000000,#0900FF);
+  min-height: 100vh;
+}
+.seccion-deg-negro-azul {
+  background: linear-gradient(135deg, #000000, #0900FF);
+  min-height: 100vh;
+}
+
+.seccion-proyectos {
+    background: linear-gradient(to bottom right, #000000, #0900FF);
+    min-height: 100vh;
+}
+.card-glass {
+    position: relative;
+    background: #3178a431;
+    backdrop-filter: blur(37px);
+    -webkit-backdrop-filter: blur(37px);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 1.5rem;
+    color: #FFFFFF;
+    box-shadow: var(--shadow-2xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    border-left: 1px solid rgba(255, 255, 255, 0.04); 
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+.card-glass-proyectos {
+    position: absolute;
+    background: #3178a431;
+    backdrop-filter: blur(37px);
+    -webkit-backdrop-filter: blur(37px);
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 1.5rem;
+    color: #FFFFFF;
+    box-shadow: var(--shadow-2xl);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); 
+    border-left: 1px solid rgba(255, 255, 255, 0.04); 
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+.tech-card {
+    background: #FFFFFF;
+    color: #3178A4;
+    font-weight: 600;
+    font-size: 0.875rem;
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.375rem;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+}
+.social-pill {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(49, 120, 164, 0.2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 0.85rem 1.25rem;
+  color: #FFFFFF;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.social-pill:hover {
+  background: rgba(49, 120, 164, 0.38);
+  transform: translateY(-2px);
+}
+.contact-label {
+  display: block;
+  color: #3178A4;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+.contact-input {
+  width: 100%;
+  background-color: #E6E6E6;
+  color: #1f2937;
+  font-size: 0.875rem;
+  padding: 0.6rem 1rem;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.contact-input:focus {
+  box-shadow: 0 0 0 2px #3178A4;
+}
+.nav-zone {
+  height: 4.5rem;
+}
+
+.nav-auto-hide {
+  transform: translateY(0);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-auto-hide.is-scrolled {
+  transform: translateY(-100%);
+}
+
+.nav-zone:hover .nav-auto-hide.is-scrolled,
+.nav-auto-hide.is-scrolled:hover,
+.nav-auto-hide:focus-within {
+  transform: translateY(0);
+}
+
+@keyframes slideReveal {
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.anim-scroll {
+  animation: slideReveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
